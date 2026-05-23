@@ -1,3 +1,14 @@
-Publications/DSc_Dissertations/Ali_Ozdagli.pdf filter=lfs diff=lfs merge=lfs -text
-Publications/Technical[[:space:]]Reports/IISL_Report_006.pdf filter=lfs diff=lfs merge=lfs -text
-videos/CIRST_Video.mp4 filter=lfs diff=lfs merge=lfs -text
+*.html text
+*.css text
+*.js text
+*.json text
+*.md text
+
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
