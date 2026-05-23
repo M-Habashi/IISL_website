@@ -1,0 +1,32 @@
+SUMMARY
+-------
+Centralized references into a single JSON (`assets/data/references.json`) with no fallback. `main.js` now loads that file, renders the References grid, wires all citations, and shows a placeholder + console error when the file is missing or empty.
+
+CHANGES
+-------
+- assets/js/main.js (mandatory references.json + empty-state rendering + stable scroll targets)
+- assets/data/references.json (authoritative reference list)
+- README.md (documentation updated for single-source workflow)
+- ref_instructions.md (fallback removed; references.json marked required)
+- todo.md (reference hyperlink task marked complete)
+
+COMMANDS RUN + KEY OUTPUTS
+--------------------------
+- python -m http.server 8000
+  - Output: Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+- start http://localhost:8000
+  - Output: Browser opened successfully
+
+TEST RESULTS
+------------
+- References grid renders from `assets/data/references.json` (17 items)
+- Hover tooltips and click-to-scroll/highlight work for all in-text citations
+- Titles with real URLs open in new tabs; placeholder `#` stays local
+- Console logs "✓ Loaded 17 references from assets/data/references.json."
+- Removing/emptying the JSON shows the "No references yet" placeholder and logs an error
+
+NEXT STEPS
+----------
+1. Replace placeholder `#` URLs with real links when available
+2. Maintain unique numeric IDs when adding references (see `ref_instructions.md`)
+3. After edits, spot-check that each `<a class="reference-link" data-ref="N">` matches a JSON entry

@@ -1,0 +1,331 @@
+[
+  {
+    "id": 1,
+    "title": "Towards Configurable Real-Time Hybrid Structural Testing: A Cyber-Physical Systems Approach",
+    "authors": "T. Tidwell, X. Gao, H-M. Huang, C. Lu, S. Dyke, and C. Gill",
+    "venue": "IEEE International Symposium on Object and Component-Oriented Real-Time Distributed Computing (ISORC), Tokyo, Japan, March 17-20, 2009",
+    "url": "https://doi.org/10.1109/ISORC.2009.41"
+  },
+  {
+    "id": 2,
+    "title": "Cyber-Physical Systems for Real-Time Hybrid Structural Testing: A Case Study",
+    "authors": "H.-M. Huang, X. Gao, T. Tidwell, C. Gill, C. Lu and S. Dyke",
+    "venue": "1st ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS), Stockholm, Sweden April 12-15, 2010",
+    "url": "https://doi.org/10.1145/1795194.1795205"
+  },
+  {
+    "id": 3,
+    "title": "Experimental Validation of a Scaled Instrumentation for Real-time Hybrid Testing",
+    "authors": "X. Gao, N. Castaneda, S. Dyke, S. Xi, C. Gill and C. Lu",
+    "venue": "2011 American Control Conference (ACC), San Francisco, CA, USA, June 29 - July 1, 2011",
+    "url": "https://doi.org/10.1109/ACC.2011.5991213"
+  },
+  {
+    "id": 4,
+    "title": "On the Performance of a Highly Parallelizable Concurrency Platform for Real-Time Hybrid Simulation",
+    "authors": "D. Ferry, A. Megareh, G. Bunting, A. Prakash, K. Agrawal, C. Gill, C. Lu and S. Dyke",
+    "venue": "6th World Conference on Structural Control and Monitoring (6WCSCM), Barcelona, Spain, July 2014",
+    "url": "https://www.cse.wustl.edu/~cdgill/publications/WCSCM2014RTHS.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Real-Time System Support for Hybrid Structural Simulation",
+    "authors": "D. Ferry, G. Bunting, A. Megareh, S. Dyke, A. Prakash, K. Agrawal, C. Gill and C. Lu",
+    "venue": "International Conference on Embedded Software (EMSOFT), New Delhi, India, October 2014",
+    "url": "https://doi.org/10.1145/2656045.2656067"
+  },
+  {
+    "id": 6,
+    "title": "Elastic Scheduling of Parallel Real-Time Tasks with Discrete Utilizations",
+    "authors": "J. Orr, J. Condori, C. Gill, S. Baruah, K. Agrawal, S. Dyke, A. Prakash, I. Bate, C. Wong, and S. Adhikari",
+    "venue": "International Conference on Real-Time Networks and Systems (RTNS), June 2020",
+    "url": "https://doi.org/10.1145/3394810.3394824"
+  },
+  {
+    "id": 7,
+    "title": "Exploiting Parallel Computing to Control Uncertain Nonlinear Systems in Real-Time",
+    "authors": "J. Condori, A. Maghareh, J. Orr, H.-W. Li, H. Montoya, S. Dyke, C. Gill, and A. Prakash",
+    "venue": "Experimental Techniques 44, Special Issue on New Frontiers and Innovative Methods for Hybrid Simulation, pp. 735-749, Springer, June 2020",
+    "url": "https://doi.org/10.1007/s40799-020-00373-w"
+  },
+  {
+    "id": 8,
+    "title": "Elastic Scheduling for Fixed-Priority Constrained-Deadline Tasks",
+    "authors": "M. Sudvarg, S. Baruah, and C. Gill",
+    "venue": "26th International Symposium On Real-Time Distributed Computing (ISORC), IEEE, May 23-25, 2023, Nashville, TN. Best paper award",
+    "url": "https://doi.org/10.1109/ISORC58943.2023.00014"
+  },
+  {
+    "id": 9,
+    "title": "Elastic Scheduling for Harmonic Task Systems",
+    "authors": "M. Sudvarg, A. Li, D. Wang, S. Baruah, J. Buhler, P. Ekberg, C. Gill, and N. Zhang",
+    "venue": "30th IEEE Real-Time and Embedded Technology and Applications Symposium (RTAS), May 2024, Hong Kong, China",
+    "url": "https://par.nsf.gov/servlets/purl/10515464"
+  },
+  {
+    "id": 10,
+    "title": "Improved Implicit-Deadline Elastic Scheduling",
+    "authors": "M. Sudvarg, C, Gill and S. Baruah",
+    "venue": "14th IEEE International Symposium on Industrial Embedded Systems (SIES), 23-25 October, 2024, Chengdu, China. Outstanding paper award",
+    "url": "https://doi.org/10.1109/SIES62473.2024.10768003"
+  },
+  {
+    "id": 11,
+    "title": "Elastic Scheduling for Graceful Degradation of Mixed-Criticality Systems",
+    "authors": "Z. Sun, M. Sudvarg, and C. Gill",
+    "venue": "32nd International Conference on Real-Time Networks and Systems (RTNS), November 6-8, 2024, Porto, Portugal",
+    "url": "https://doi.org/10.1145/3696355.3699701"
+  },
+  {
+    "id": 12,
+    "title": "Subtask-Level Elastic Scheduling",
+    "authors": "M. Sudvarg, D. Wang, J. Buhler and C. Gill",
+    "venue": "45th IEEE Real-Time Systems Symposium (RTSS), December 10-13, 2024, York, UK",
+    "url": "https://doi.org/10.1109/RTSS62706.2024.00040"
+  },
+  {
+    "id": 13,
+    "title": "Towards a concurrency platform for scalable multi-axial real-time hybrid simulation",
+    "authors": "M. Sudvarg, O. Bell, T. Martin, B. Standaert, T. Zhang, S.-B. Kwon, C. Gill, and A. Prakash",
+    "venue": "Frontiers in the Built Environment Vol. 10, September 2024, Special Issue on Earthquake Engineering",
+    "url": "https://doi.org/10.3389/fbuil.2024.1424721"
+  },
+  {
+    "id": 14,
+    "title": "Integrated Real-Time Control and Scheduling for Safety Critical Cyber-Physical Systems",
+    "authors": "M. Sudvarg, A. Clark, and C. Gill",
+    "venue": "31st IEEE Real-Time and Embedded Technology and Applications Symposium (RTAS), May 2025, Irvine, CA, USA",
+    "url": "https://doi.org/10.1109/RTAS65571.2025.00037"
+  },
+  {
+    "id": 15,
+    "title": "ILP Representations of Multi-Phase Limited-Preemption Tasks",
+    "authors": "B. Standaert, M. Sudvarg, F. Raadia, and C. Gill",
+    "venue": "2nd Workshop on OPtimization for Embedded and ReAl-time systems (OPERA), at RTSS, December 2024",
+    "url": "https://opera24.di.unito.it/wp-content/uploads/2024/11/3_Final_version.pdf"
+  },
+  {
+    "id": 16,
+    "title": "A Limited-Preemption Scheduling Model Inspired by Security Considerations",
+    "authors": "M. Sudvarg, F. Raadia, B. Standaert, S. Baruah, T. Chantem, N. Fisher, and C. Gill",
+    "venue": "Leibniz Transactions on Embedded Systems (LITES) 10(1), May 2025, pp. 3:1-3:27",
+    "url": "https://openscholarship.wustl.edu/cse_facpubs/2/"
+  },
+  {
+    "id": 17,
+    "title": "Reconciling ROS 2 with Classical Real-Time Scheduling of Periodic Tasks",
+    "authors": "H. Teper, O. Bell, M. Guenzel, C. Gill, and J.-J. Chen",
+    "venue": "31st IEEE Real-Time and Embedded Technology and Applications Symposium (RTAS), May 2025, Irvine, CA, USA",
+    "url": "https://doi.org/10.1109/RTAS65571.2025.00027"
+  },
+  {
+    "id": 18,
+    "title": "Improved Elastic Scheduling Algorithms for Implicit-Deadline Tasks",
+    "authors": "Marion Sudvarg, Christopher Gill, and Sanjoy Baruah",
+    "venue": "Leibniz Transactions on Embedded Systems, Volume 10, Issue 2, pp. 2:1-2:36, 2025",
+    "url": "https://drops.dagstuhl.de/entities/document/10.4230/LITES.10.2.2"
+  },
+  {
+    "id": "MG13",
+    "title": "Analysis of hybrid viscous damper by real time hybrid simulations",
+    "authors": "Mark Laier Brodersen, Ge Ou, Jan Høgsberg, and Shirley Dyke",
+    "venue": "Engineering Structures, vol. 126, pp. 675–688, 2016",
+    "url": "https://doi.org/10.1016/j.engstruct.2016.08.020"
+  },
+  {
+    "id": "MG1",
+    "title": "Real time hybrid simulation: from dynamic system, motion control to experimental error",
+    "authors": "Xiuyu Gao, Nestor Castaneda, and Shirley J. Dyke",
+    "venue": "Earthquake Engineering & Structural Dynamics, vol. 42 (6), pp. 815-832, 2013",
+    "url": "https://doi.org/10.1002/eqe.2246"
+  },
+  {
+    "id": "MG3",
+    "title": "Experimental validation of a generalized procedure for MDOF real-time hybrid simulation",
+    "authors": "Xiuyu Gao, Nestor Castaneda and Shirley J Dyke",
+    "venue": "Journal of Engineering Mechanics, vol. 140 (4), pp. 04013006, 2014",
+    "url": "https://ascelibrary.org/doi/full/10.1061/%28ASCE%29EM.1943-7889.0000696"
+  },
+  {
+    "id": "MG8",
+    "title": "Robust integrated actuator control: experimental verification and real-time hybrid-simulation implementation",
+    "authors": "Ge Ou, Ali Irmak Ozdagli, Shirley J Dyke and Bin Wu",
+    "venue": "Earthquake Engineering & Structural Dynamics, vol. 44 (3), pp. 441–460, 2015",
+    "url": " https://doi.org/10.1002/eqe.2479"
+  },
+  {
+    "id": "MG19",
+    "title": "A Self-tuning Robust Control System for nonlinear real-time hybrid simulation",
+    "authors": "Amin Maghareh, Shirley J Dyke and Christian E Silva",
+    "venue": "Earthquake Engineering & Structural Dynamics, vol. 49 (7), pp. 695–715, 2020",
+    "url": " https://doi.org/10.1002/eqe.3260"
+  },
+  {
+    "id": "MG21",
+    "title": "Sliding mode control design for the benchmark problem in real-time hybrid simulation",
+    "authors": "Hongwei Li, Amin Maghareh, Herta Montoya, Johnny Wilfredo Condori Uribe, Shirley J Dyke and Zhaodong Xu",
+    "venue": "Mechanical Systems and Signal Processing, vol. 151, pp. 107364, 2021",
+    "url": "https://doi.org/10.1016/j.ymssp.2020.107364"
+  },
+  {
+    "id": "MG26",
+    "title": "Nonlinear and Multi-physics Control Frameworks for RTHS",
+    "authors": "S. J. Dyke, H. Montoya, M. Salmeron, E. Patino, C. Silva, and J. Condori",
+    "venue": "Proceedings of the 18th World Conference on Earthquake Engineering, Milan, Italy, June 30-July 5, 2024",
+    "url": "#"
+  },
+  {
+    "id": "MG4",
+    "title": "Modeling and control of actuators for high performance structural dynamic testing",
+    "authors": "X Gao and SJ Dyke",
+    "venue": "Smart Materials and Structures, vol. 23 (5), pp. 055008, 2014",
+    "url": "https://iopscience.iop.org/article/10.1088/0964-1726/23/5/055008/meta"
+  },
+  {
+    "id": "MG7",
+    "title": "Parametric identification of a servo-hydraulic actuator for real-time hybrid simulation",
+    "authors": "Yili Qian, Ge Ou, Amin Maghareh and Shirley J Dyke",
+    "venue": "Mechanical Systems and Signal Processing, vol. 48 (1-2), pp. 260–273, 2014",
+    "url": "https://doi.org/10.1016/j.ymssp.2014.03.001"
+  },
+  {
+    "id": "MG16",
+    "title": "Servo-hydraulic actuator in controllable canonical form: Identification and experimental validation",
+    "authors": "Amin Maghareh, Christian E Silva and Shirley J Dyke",
+    "venue": "Mechanical Systems and Signal Processing, vol. 100, pp. 398–414, 2018",
+    "url": "https://doi.org/10.1016/j.ymssp.2017.07.022"
+  },
+  {
+    "id": "MG17",
+    "title": "Parametric model of servo-hydraulic actuator coupled with a nonlinear system: Experimental validation",
+    "authors": "Amin Maghareh, Christian E Silva and Shirley J Dyke",
+    "venue": "Mechanical Systems and Signal Processing, vol. 104, pp. 663–672, 2018",
+    "url": "https://doi.org/10.1016/j.ymssp.2017.11.009"
+  },
+  {
+    "id": "MG5",
+    "title": "Establishing a stability switch criterion for effective implementation of real-time hybrid simulation",
+    "authors": "Amin Maghareh, Shirley J Dyke, Arun Prakash and Jeffrey F Rhoads",
+    "venue": "Smart Struct. Syst, vol. 14 (6), pp. 1221–1245, 2014",
+    "url": "https://engineering.purdue.edu/~jfrhoads/Publications/SSS_2014.pdf"
+  },
+  {
+    "id": "MG6",
+    "title": "Establishing a predictive performance indicator for real-time hybrid simulation",
+    "authors": "Amin Maghareh, Shirley J Dyke, Arun Prakash and Gregory B Bunting",
+    "venue": "Earthquake engineering & structural dynamics, vol. 43 (15), pp. 2299–2318, 2014",
+    "url": "https://doi.org/10.1002/eqe.2448"
+  },
+  {
+    "id": "MG10",
+    "title": "Experimental implementation of predictive indicators for configuring a real-time hybrid simulation",
+    "authors": "Fangshu Lin, Amin Maghareh, Shirley J Dyke and Xilin Lu",
+    "venue": "Engineering structures, vol. 101, pp. 427–438, 2015",
+    "url": "https://doi.org/10.1016/j.engstruct.2015.07.040"
+  },
+  {
+    "id": "MG15",
+    "title": "Predictive stability indicator: a novel approach to configuring a real-time hybrid simulation",
+    "authors": "Amin Maghareh, Shirley Dyke, Siamak Rabieniaharatbar and Arun Prakash",
+    "venue": "Earthquake Engineering & Structural Dynamics, vol. 46 (1), pp. 95–116, 2017",
+    "url": "https://doi.org/10.1002/eqe.2775"
+  },
+  {
+    "id": "MG2",
+    "title": "Computational tool for real-time hybrid simulation of seismically excited steel frame structures",
+    "authors": "Nestor Castaneda, Xiuyu Gao and Shirley J Dyke",
+    "venue": "Journal of Computing in Civil Engineering, vol. 29 (3), pp. 04014049, 2015",
+    "url": "https://doi.org/10.1061/(ASCE)CP.1943-5487.00003"
+  },
+  {
+    "id": "MG9",
+    "title": "Modified Runge-Kutta integration algorithm for improved stability and accuracy in real time hybrid simulation",
+    "authors": "Ge Ou, Arun Prakash and Shirley Dyke",
+    "venue": "Journal of Earthquake Engineering, vol. 19 (7), pp. 1112–1139, 2015",
+    "url": "https://doi.org/10.1080/13632469.2015.1027018"
+  },
+  {
+    "id": "MG11",
+    "title": "Adaptive multi-rate interface: development and experimental verification for real-time hybrid simulation",
+    "authors": "Amin Maghareh, Jacob P Waldbjørn, Shirley J Dyke, Arun Prakash and Ali I Ozdagli",
+    "venue": "Earthquake Engineering & Structural Dynamics, vol. 45 (9), pp. 1411–1425, 2016",
+    "url": "https://doi.org/10.1002/eqe.2713"
+  },
+  {
+    "id": "MG22",
+    "title": "Multi-rate Real Time Hybrid Simulation operated on a flexible LabVIEW real-time platform",
+    "authors": "Jacob P Waldbjoern, Amin Maghareh, Ge Ou, Shirley J Dyke and Henrik Stang",
+    "venue": "Engineering Structures, vol. 239, pp. 112308, 2021",
+    "url": "https://doi.org/10.1016/j.engstruct.2021.112308"
+  },
+  {
+    "id": "MG12",
+    "title": "Characterizing errors and evaluating performance of transient simulations using multi-time-step integration",
+    "authors": "Gregory Bunting, Arun Prakash, Shirley Dyke and Amin Maghareh",
+    "venue": "Journal of Computing in Civil Engineering, vol. 30 (5), pp. 04016013, 2016",
+    "url": "https://doi.org/10.1061/(ASCE)CP.1943-5487.000057"
+  },
+  {
+    "id": "MG14",
+    "title": "Real time hybrid simulation with online model updating: An analysis of accuracy",
+    "authors": "Ge Ou, Shirley J Dyke and Arun Prakash",
+    "venue": "Mechanical Systems and Signal Processing, vol. 84, pp. 223–240, 2017",
+    "url": "https://doi.org/10.1016/j.ymssp.2016.06.015"
+  },
+  {
+    "id": "MG20",
+    "title": "Investigation of hybrid simulation with model updating compared to an experimental shake table test",
+    "authors": "Ge Ou, Ge Yang, Shirley Dyke and Bin Wu",
+    "venue": "Frontiers in Built Environment, vol. 6, pp. 103, 2020",
+    "url": "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2020.00103/full"
+  },
+  {
+    "id": "MG23",
+    "title": "Hybrid simulation with multiple actuators: a state-of-the-art review",
+    "authors": "Amirali Najafi, Gaston A Fermandois, Shirley J Dyke and Billie F Spencer Jr",
+    "venue": "Engineering Structures, vol. 276, pp. 115284, 2023",
+    "url": "https://doi.org/10.1016/j.engstruct.2022.115284"
+  },
+  {
+    "id": "MG18",
+    "title": "Benchmark control problem for real-time hybrid simulation",
+    "authors": "Christian E Silva, Daniel Gomez, Amin Maghareh, Shirley J Dyke and Billie F Spencer Jr",
+    "venue": "Mechanical Systems and Signal Processing, vol. 135, pp. 106381, 2020",
+    "url": "https://doi.org/10.1016/j.ymssp.2019.106381"
+  },
+  {
+    "id": "MG24",
+    "title": "Experimental benchmark control problem for multi-axial real-time hybrid simulation",
+    "authors": "Johnny W Condori Uribe, Manuel Salmeron, Edwin Patino, Herta Montoya, Shirley J Dyke, Christian E Silva, Amin Maghareh, Mehdi Najarian and Arturo Montoya",
+    "venue": "Frontiers in Built Environment, vol. 9, pp. 1270996, 2023",
+    "url": "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2023.1270996/full"
+  },
+  {
+    "id": "MG25",
+    "title": "Experimental benchmark control problem on multi-axial real-time hybrid simulation",
+    "authors": "Gastón Fermandois, Mariantonieta Gutiérrez Soto, Wei Song, Tao Wang and Shirley J Dyke",
+    "venue": "Frontiers in Built Environment, vol. 10, pp. 1540293, 2024",
+    "url": "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2024.1540293/full"
+  },
+  {
+    "id": "AP1",
+    "title": "Scalar Auxiliary Variable (SAV) Stabilization of Implicit-Explicit (IMEX) Time Integration Schemes for Non-Linear Structural Dynamics",
+    "authors": "Sun-Beom Kwon and Arun Prakash",
+    "venue": "International Journal for Numerical Methods in Engineering, vol. 126 (2), pp. e7660, 2025",
+    "url": "https://doi.org/10.1002/nme.7660"
+  },
+  {
+    "id": "AP2",
+    "title": "Coupling composite schemes with different time steps for multi-scale structural dynamics",
+    "authors": "Sun-Beom Kwon and Arun Prakash",
+    "venue": "International Journal for Multiscale Computational Engineering, vol. 23 (3), 2025",
+    "url": "https://www.dl.begellhouse.com/journals/61fd1b191cf7e96f,222eb7aa7bfee3a0,53e799f666e63fe2.html"
+  },
+  {
+  "id": "AP3",
+  "title": "A unified computational framework for developing general multitime-step (MTS) coupling schemes for time-dependent problems",
+  "authors": "S.-B. Kwon and A. Prakash",
+  "venue": "Engineering with Computers, accepted August 2025",
+  "url": "https://doi.org/10.1007/s00366-025-02189-x"
+}
+]

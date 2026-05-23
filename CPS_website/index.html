@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MechWorks Project</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260217b"/>
+</head>
+<body>
+    <!-- Mobile Header (narrow screens) -->
+    <header id="mobile-header" class="glassmorphism">
+        <button id="nav-toggle" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="mobile-brand font-display">MechWorks</div>
+    </header>
+    <div id="nav-overlay"></div>
+
+    <!-- Top/Sidebar Navigation -->
+    <nav id="site-nav" class="glassmorphism">
+        <div class="nav-inner">
+            <div class="brand">MechWorks</div>
+            <div class="grow"></div>
+            <a href="#hero" class="nav-item active">Home</a>
+            <a href="#overview" class="nav-item">Overview</a>
+            <a href="#background" class="nav-item">Background</a>
+            <a href="#contributions" class="nav-item">Contributions</a>
+            <a href="#RTHS_advances" class="nav-item">RTHS</a>
+            <a href="#Benchmarks" class="nav-item">Benchmarks</a>
+            <a href="#impact" class="nav-item">Impact</a>
+            <a href="#references" class="nav-item">References</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section section visible">
+        <div id="particles-hero"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="max-w-6xl mx-auto px-8 min-h-[90vh] flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-6xl lg:text-7xl font-bold mb-6 font-display">
+                            MechWorks
+                            <span class="text-yellow-400">Project</span>
+                        </h1>
+                        <p class="text-xl lg:text-2xl mb-8 text-gray-200">
+                            Research Contributions in Cyber-Physical Systems
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <span class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-full font-semibold text-sm">
+                                Award ID: CNS-2229290
+                            </span>
+                            <span class="px-4 py-2 bg-blue-600 text-white rounded-full font-semibold text-sm">
+                                Award ID: CNS-2229136
+                            </span>
+                        </div>
+                        <p class="text-lg text-gray-300">Washington University in St. Louis & Purdue University</p>
+                        <p class="text-sm text-gray-400 mt-2">04/15/2023 - 03/31/2026</p>
+                    </div>
+                    <div class="relative">
+                        <img src="assets/images/hero-cps.png" alt="Cyber-Physical Systems" class="w-full h-auto rounded-2xl shadow-2xl"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+        <div class="content-grid">
+            <div><h2 class="section-title">Project Overview</h2></div>
+            <div class="section-content">
+                <p class="mb-6">
+                    The major goals of this project are to (1) integrate timing and other relevant semantics across control and scheduling models, (2) capture both safety constraints and performance trade-offs involving control and scheduling parameters explicitly and quantitatively, (3) provide new platform abstractions, policies, and mechanisms to manage those constraints and trade-offs adaptively and rigorously at run-time, and (4) conduct thorough evaluations of the approaches we develop using representative cyber-physical systems applications with an emphasis on real-time hybrid simulation (RTHS) experiments in the domains of structural and natural hazards engineering as well as in other cyber-physical application domains.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background" class="section">
+        <div class="content-grid">
+            <div><h2 class="section-title">Background and Prior Work</h2></div>
+            <div class="section-content">
+                <p class="mb-6">
+                    This research builds on two previous research collaborations we have conducted with support from the US National Science Foundation (NSF).  The Cyber-physical Instrument for Real-time hybrid Structural Testing (CIRST) project (CNS-0821713 and CNS-1028668, 07/01/2008-06/30/2011) established a highly configurable architecture for integrating computers and physical components, with system support for real-time operations in hybrid computational/physical testing [<a href="#" class="reference-link" data-ref="1">1</a>]  including control models and a real-time middleware infrastructure that were prototyped in a small-scale case study [<a href="#" class="reference-link" data-ref="2">2</a>] and then validated in experiments of increasing scale [<a href="#" class="reference-link" data-ref="3">3</a>].  The CyberMech project (CNS-1136073 and CNS-1136075, 09/01/2011 - 08/31/2016) built on those contributions by applying advances in parallel real-time scheduling theory to RTHS [<a href="#" class="reference-link" data-ref="4">4</a>] and extending our platform middleware to achieve RTHS sub-millisecond timescales for the first time [<a href="#" class="reference-link" data-ref="5">5</a>].  Subsequent work pioneered new discrete elastic scheduling techniques [<a href="#" class="reference-link" data-ref="6">6</a>] and leveraged them in the first ever virtual RTHS to enable switching between linear and non-linear modes of operation under realistic conditions [<a href="#" class="reference-link" data-ref="7">7</a>].
+                    </p>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributions -->
+    <section id="contributions" class="section">
+        <div class="content-grid">
+            <div><h2 class="section-title">Core Contributions of this Research</h2></div>
+            <div class="section-content">
+                <p class="mb-6">
+                    We have made multiple new contributions to elastic real-time scheduling theory that are relevant to rigorous adaptation in parallel RTHS at scale, 
+                    including task models with constrained deadlines [<a href="#" class="reference-link" data-ref="8">8</a>] or harmonic rate requirements 
+                    [<a href="#" class="reference-link" data-ref="9">9</a>], complexity improvements for scheduling implicit deadline tasks 
+                    [<a href="#" class="reference-link" data-ref="10">10</a>], elastic mixed-criticality tasks 
+                    [<a href="#" class="reference-link" data-ref="11">11</a>], and subtask-level elastic scheduling 
+                    [<a href="#" class="reference-link" data-ref="12">12</a>]. We also have extended our approach to more sophisticated RTHS scenarios including multi-axial experiments with models at different scales 
+                    [<a href="#" class="reference-link" data-ref="13">13</a>]. We further developed elastic scheduling for implicit-deadline tasks by introducing faster admission-control methods
+                    and polynomial-time exact algorithms for global EDF and global RM [<a href="#" class="reference-link" data-ref="18">18</a>].
+
+                    <div class="figure-slider" data-figure-slider>
+                        <div class="figure-slide active">
+                            <div class="figure-highlight">
+                                <img src="assets/images/chris_01_ink.png"
+                                    alt="Harmonic Elastic Scheduling to Improve Simultaneous Localization and Mapping."
+                                    class="figure-highlight-image" />
+                                <div class="figure-highlight-caption">
+                                    <p>Harmonic Elastic Scheduling to Improve Simultaneous Localization and Mapping</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    These foundational advances in the state of the art in adaptive cyber-physical systems scheduling and control have in turn opened new avenues of investigation.  Specifically, as we have gained experience with the new techniques developed in this research, several promising directions for future enrichment and application of our approaches have emerged, including ever more rigorous integration and co-design of control and scheduling models to enable adaptive performance optimization while ensuring safety [<a href="#" class="reference-link" data-ref="14">14</a>], leveraging state of the art parallelism libraries like OpenMP 5.3, CUDA, and cuBLAS atop heterogeneous (i.e., multicore + GPU + FPGA) computational devices in adaptive millisecond-timescale parallel RTHS for ever larger and more complex experiments, and considering how both state estimation and control strategy switching can be coordinated to ensure optimized and safe behavior over a wider range of RTHS scenarios. 
+                    <br>
+                        <div class="figure-slider" data-figure-slider>
+                            <div class="figure-slide active">
+                                <div class="figure-highlight">
+                                    <img src="assets/images/chris_02_ink.png" alt="alt"
+                                        class="figure-highlight-image" />
+                                    <div class="figure-highlight-caption">
+                                        <p>Co-Designed Real-Time Control and Scheduling</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="figure-slide">
+                                <div class="figure-highlight">
+                                    <img src="assets/images/chris_03_ink.png" alt="alt"
+                                        class="figure-highlight-image" />
+                                    <div class="figure-highlight-caption">
+                                        <p>Co-Designed Real-Time Control and Scheduling</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-controls-bar" role="group" aria-label="Figure navigation controls">
+                                <button class="slider-control prev" type="button" data-slider-prev aria-label="Previous slide">&#10094;</button>
+                                <div class="slider-dots" role="tablist" aria-label="Figure navigation">
+                                    <button class="dot active" type="button" aria-label="Show slide 1" data-slider-target="0"></button>
+                                    <button class="dot" type="button" aria-label="Show slide 2" data-slider-target="1"></button>
+                                </div>
+                                <button class="slider-control next" type="button" data-slider-next aria-label="Next slide">&#10095;</button>
+                            </div>
+                        </div>
+
+                    <br>
+                    Alongside these scheduling advancements, we have substantially advanced RTHS, the application that requires these powerful computational advances, by improving its performance and expanding its applicability to more complex systems and experimental setups. These scientific advances are a direct output of the capabilities toward real-time heterogeneous computing, as discussed above. A fundamental component of this work was developing the methodologies needed to ensure high standards of safety and reliability, which in turn solidifies the position of RTHS as a robust and cost-effective alternative to large-scale physical tests.
+                    
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="RTHS_advances" class="section">
+    <div class="content-grid">
+        <div><h2 class="section-title">Application: RTHS advances</h2></div>
+        <div class="section-content">
+            <p class="mb-6">
+                Development of sophisticated actuator control strategies has been a primary focus to provide reliable testing frameworks that enhances its stability and overcomes the inherent delays and dynamics of servo-hydraulic systems. For instance, in [<a href="#" class="reference-link" data-ref="MG13">MG 13</a>] The behavior of a hybrid viscous damper was experimentally validated using RTHS, showing good correlation with numerical simulations. Robust control methods, such as H∞ loop shaping, have also been proposed and validated to improve stability limits and test accuracy, especially in the presence of unmodeled dynamics and uncertainties [<a href="#" class="reference-link" data-ref="MG1">MG1</a>, <a href="#" class="reference-link" data-ref="MG3">MG3</a>, <a href="#" class="reference-link" data-ref="MG8">MG8</a>]. To handle significant nonlinearities and uncertainties in the physical substructure, advanced approaches like self-tuning robust control systems have been developed, often integrating sliding mode control with online estimators to adapt to changing specimen behavior at runtime [<a href="#" class="reference-link" data-ref="MG19">MG19</a>, <a href="#" class="reference-link" data-ref="MG21">MG21</a>, <a href="#" class="reference-link" data-ref="MG26">MG26]</a>. Accurate dynamic modeling of the transfer system is crucial for these model-based control designs. Our research has produced detailed parametric identification procedures to obtain actuator models [<a href="#" class="reference-link" data-ref="MG4">MG4</a>, <a href="#" class="reference-link" data-ref="MG7">MG7</a>] and has extended these models to controllable canonical forms for actuators coupled with nonlinear physical systems, with experimental validation [<a href="#" class="reference-link" data-ref="MG16">MG16</a>, <a href="#" class="reference-link" data-ref="MG17">MG17</a>]. 
+                <br>
+                Alongside control performance, ensuring the stability of the entire cyber-physical loop has been a key research thrust. Predictive indicators have been established to assess the stability of an RTHS configuration prior to testing, providing engineers with tools to make informed decisions on partitioning the structure into numerical and physical substructures [<a href="#" class="reference-link" data-ref="MG5">MG5</a>, <a href="#" class="reference-link" data-ref="MG6">MG6</a>, <a href="#" class="reference-link" data-ref="MG10">MG10</a>]. These stability indicators were later extended from single-degree-of-freedom to multi-degree-of-freedom (MDOF) systems, providing a computationally efficient method to analyze partitioning choices [<a href="#" class="reference-link" data-ref="MG15">MG15</a>]. Innovations have also occurred on the computational side of RTHS. Computational platforms have been developed to provide reliable modeling and real-time execution capabilities for complex structures [<a href="#" class="reference-link" data-ref="MG2">MG2</a>]. To improve computational capabilities, a modified Runge-Kutta (MRK) integration algorithm was proposed to predict feedback forces and improve stability and accuracy [<a href="#" class="reference-link" data-ref="MG9">MG9</a>]. For computationally intensive numerical models, multi-rate techniques like the Adaptive Multi-rate Interface (AMRI) have been developed, allowing the numerical and physical substructures to operate at different time steps without sacrificing accuracy [<a href="#" class="reference-link" data-ref="MG11">MG11</a>, <a href="#" class="reference-link" data-ref="MG22">MG22</a>], building upon foundational work in characterizing errors in multi-timestep integration [<a href="#" class="reference-link" data-ref="MG12">MG12</a>]. Furthermore, the concept of RTHS with online model updating (RTHSMU) has been introduced, where information from the physical test is used to recursively update parameters in the numerical model, enhancing the overall fidelity of the simulation [<a href="#" class="reference-link" data-ref="MG14">MG14</a>, <a href="#" class="reference-link" data-ref="MG20">MG20</a>]. Recent efforts have focused on extending RTHS to multi-axial (maRTHS) scenarios, which presents significant challenges related to multi-actuator dynamic coupling and complex kinematics but is essential for more realistic structural evaluation [<a href="#" class="reference-link" data-ref="MG23">MG23</a>].
+                <br>
+                A key aspect of advancements in RTHS is developing fast, stable and accurate time integration methods that can be used reliably to advance the numerical sub-structure (especially when it is nonlinear) in the control loop. However, two serious drawbacks affect existing time-integration methods. One is that their stability cannot be guaranteed for general nonlinear problems. Secondly, a large class of time-integration methods, called implicit methods, require computationally intensive iterations at every time-step making them impractical for real-time applications. We developed a class of novel time-integration methods, called multi-time-step (MTS) implicit-explicit (IMEX) methods (see [<a href="#" class="reference-link" data-ref="AP1">AP1</a>,<a href="#" class="reference-link" data-ref="AP2">AP2</a>,<a href="#" class="reference-link" data-ref="AP3">AP3</a>]) that not only overcome these shortcomings of existing time integration methods for RTHS, but also advance the state of the art for other CPS applications. 
+
+            </p>
+            <div class="figure-slider" data-figure-slider>
+                <div class="figure-slide active">
+                    <div class="figure-highlight">
+                        <img src="assets/images/image1_comp.png" alt="maRTHS benchmark plant implementation in the IISL laboratory"
+                            class="figure-highlight-image" />
+                        <div class="figure-highlight-caption">
+                            <p>maRTHS benchmark plant implementation in the IISL laboratory</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="figure-slide">
+                    <div class="figure-highlight">
+                        <img src="assets/images/image2.png" alt="RTHS testbed for seismic metamaterials" class="figure-highlight-image" />
+                        <div class="figure-highlight-caption">
+                            <p>RTHS testbed for seismic metamaterials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls-bar" role="group" aria-label="Figure navigation controls">
+                    <button class="slider-control prev" type="button" data-slider-prev aria-label="Previous slide">&#10094;</button>
+                    <div class="slider-dots" role="tablist" aria-label="Figure navigation">
+                        <button class="dot active" type="button" aria-label="Show slide 1" data-slider-target="0"></button>
+                        <button class="dot" type="button" aria-label="Show slide 2" data-slider-target="1"></button>
+                    </div>
+                    <button class="slider-control next" type="button" data-slider-next aria-label="Next slide">&#10095;</button>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Benchmarks -->
+    <section id="Benchmarks" class="section">
+        <div class="content-grid">
+            <div><h2 class="section-title">Benchmark Problems </h2></div>
+            <div class="section-content">
+                <p class="mb-6">
+                    To facilitate the advancement and a fair comparison of these methods within the research community, a series of benchmark control problems for RTHS have been established. The first benchmark problem focused on a single-actuator RTHS of a seismically excited three-story building, providing a virtual testbed for researchers to evaluate the performance and robustness of various control strategies [<a href="#" class="reference-link" data-ref="MG18">MG18</a>]. About one hundred researchers have used this problem statement to demonstrate and further their research since that problem was distributed. Building on this success, a second-generation benchmark problem was developed for multi-axial RTHS (maRTHS), dramatically increasing the complexity by incorporating two actuators to command both translational and rotational degrees of freedom at the interface [<a href="#" class="reference-link" data-ref="MG24">MG24</a>]. This maRTHS benchmark provides a realistic virtual platform to develop control techniques for highly coupled systems and encourages the transition toward more advanced multi-actuator experimental scenarios. These benchmarks have enabled researchers to validate their methodologies not only in virtual environments but also through physical RTHS experiments conducted at the Intelligent Infrastructure Systems Lab (IISL) [<a href="#" class="reference-link" data-ref="MG25">MG25</a>].
+                    <br>
+                    To further push the boundaries of control and scheduling co-design, we have developed a testbed for conducting RTHS of architected seismic metamaterials - a class of materials with unusual physical properties that can be used to mitigate the damaging effects of earthquakes on structures. The testbed is instrumented with force transducers, a digital camera, and a displacement encoder to provide real-time feedback on the forces and motions imparted to the metamaterial specimens. Multiple parallel real-time processes running at varying rates control the shake table motion and real-time image-processing during the RTHS experiment. The nuanced response of the microstructure of the metamaterial poses unique challenges in control, scheduling and numerical modeling of seismic metamaterials and we are continuing to explore these issues with ongoing research. 
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Impact -->
+    <section id="impact" class="section">
+        <div class="content-grid">
+            <div><h2 class="section-title">Broader Impacts</h2></div>
+            <div class="section-content">
+                <p class="mb-6">
+                    As this project has advanced and matured, we have broadened our investigations of real-time scheduling models and platform software laterally, to encompass limited-preemption task 
+                    [<a href="#" class="reference-link" data-ref="15">15</a>]and scheduling 
+                    [<a href="#" class="reference-link" data-ref="16">16</a>] models that are relevant to cyber-physical system security (for example when control flow must enter and leave a trusted execution environment for some segments of a thread's execution). 
+                    We also have collaborated with other real-time systems researchers to consider how classical scheduling models can be reconciled with execution models supported by widely used robotics middleware like ROS 2 
+                    [<a href="#" class="reference-link" data-ref="17">17</a>].
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- References -->
+    <section id="references" class="section">
+        <div class="max-w-6xl mx-auto px-8">
+            <h2 class="text-4xl font-bold text-left mb-12 font-display cps-text-dark">References</h2>
+            <div class="references-grid">
+                <div class="reference-item" data-ref-id="loading">
+                    <div class="flex items-start">
+                        <span class="reference-number">--</span>
+                        <div class="flex-1">
+                            <div class="reference-title">Loading references...</div>
+                            <div class="reference-venue text-sm text-gray-400">If this message stays visible, please check that <code>assets/data/references.json</code> is reachable.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- Footer End Cap -->
+    <footer class="page-end"></footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/main.js?v=20260217b"></script>
+</body>
+</html>
+
