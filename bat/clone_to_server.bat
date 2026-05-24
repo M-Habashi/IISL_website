@@ -42,7 +42,7 @@ if not exist "%SOURCE%\.git\" (
     exit /b 18
 )
 
-robocopy "%SOURCE%" "%DEST%" /E /PURGE /COPY:DT /DCOPY:T /XD .git unused /XF AGENTS.md /R:1 /W:1 /TEE /LOG:"%LOG%"
+robocopy "%SOURCE%" "%DEST%" /E /PURGE /COPY:DT /DCOPY:T /XD .git unused /R:1 /W:1 /TEE /LOG:"%LOG%"
 set "ROBOCOPY_EXIT=%ERRORLEVEL%"
 
 echo.
