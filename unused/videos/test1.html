@@ -1,0 +1,306 @@
+<!-- Common Block ....................................................................................... -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Dr. Kwon's publications" />
+  <meta name="keywords" content="publication" />
+  <meta name="Oh-Sung Kwon" content="Oh-Sung Kwon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="screen.css?version=5" media="screen,projection" />
+  <title>Professor Oh-Sung Kwon</title>
+
+  <!-- @TKS: css styles -->
+  <style>
+    .btn {
+      background-color: #4B93B1;
+      border: none;
+      color: white;
+      padding: 3px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1em;
+      margin: 1px 1px;
+      cursor: pointer;
+    }
+
+    .btn.active {
+      background: #aaa;
+    }
+
+    .btn:hover {
+      background-color: #295263;
+      color: white;
+    }
+
+    .published_articles {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    label {
+      border: none;
+      display: inline-block;
+      font-size: 1em;
+      font-weight: 700;
+      color: #1D507A;
+      cursor: pointer;
+    }
+    }
+
+    label:hover {
+      color: #800000;
+    }
+
+    input[type=checkbox]:hover {
+      box-shadow: 0px 0px 1px #000000;
+    }
+
+    #myBtnContainer {
+      word-wrap: normal;
+      white-space: nowrap;
+    }
+
+    @media only screen and (max-width: 650px) {
+      #key_c4 {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      #key_c3 {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 340px) {
+      #key_c2 {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1><a href="index.html">_ _ _</a></h1>
+      <p> <a onclick="target='newwindow'" href="http://www.civil.engineering.utoronto.ca">_ _ _</a><br />
+        <a onclick="target='newwindow'" href="http://www.utoronto.ca/">_ _ _</a></p>
+    </div>
+
+    <img id="frontphoto" src="./img/front_top_fall.jpg" alt="" />
+
+    <div id="leftside" class="avmenu">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a class="current" href="publication.html">Publications</a>
+      <a href="labmember.html">People</a>
+    </div>
+
+    <!-- Contents of this web page ................................................................... -->
+    <div id="contentwide">
+      <h2>Publications</h2>
+      <a onclick="target='newwindow'" href="https://www.researchgate.net/profile/Oh_Sung_Kwon4">ResearchGate</a> <br />
+      <a onclick="target='newwindow'" href="http://scholar.google.ca/citations?user=Mqlvw_cAAAAJ&hl=en">Google Scholar Citations Report</a><br />
+      <a onclick="target='newwindow'" href="https://www.scopus.com/authid/detail.uri?origin=resultslist&authorId=56459431700">Scopus Author Details</a> <br />
+      <a onclick="target='newwindow'" href="https://publons.com/researcher/2631470/oh-sung-kwon/">Publons</a>
+
+
+      <!-- @TKS: tags to click -->
+      <br />
+      <hr />
+      <h3>Keywords</h3>
+      Tick check boxes below to apply filters. You may use more than one filter. <br /><br />
+      <div id="myBtnContainer">
+
+        <table style="width:100%">
+          <tr>
+            <td valign="top" id="key_c1">Loads: </td>
+            <td valign="top" id="key_c2">Methods: </td>
+             <td valign="top" id="key_c3">Other keywords: </td>
+            <!-- <td valign="top" id="key_c4">Other keywords: </td>  -->
+          </tr>
+          <tr>
+            <td valign="top" id="key_c1">
+              <input id="checkbox01" type="checkbox" onclick="filterSelection('published_articles', 'L_E')" />&nbsp;<label for="checkbox01">Earthquake</label><br />
+              <input id="checkbox02" type="checkbox" onclick="filterSelection('published_articles', 'L_F')" />&nbsp;<label for="checkbox02">Fire</label><br />
+              <input id="checkbox03" type="checkbox" onclick="filterSelection('published_articles', 'L_W')" />&nbsp;<label for="checkbox03">Wind (Fluid)</label><br />
+              <input id="checkbox04" type="checkbox" onclick="filterSelection('published_articles', 'L_P')" />&nbsp;<label for="checkbox04">Wave/Coastal (Fluid)</label><br />
+            </td>
+            <td valign="top" id="key_c2">
+              <input id="checkbox05" type="checkbox" onclick="filterSelection('published_articles', 'M_UQ')" />&nbsp;<label for="checkbox05">Uncertainty Quantification (UQ)</label> <br />
+              <input id="checkbox06" type="checkbox" onclick="filterSelection('published_articles', 'M_N')" />&nbsp;<label for="checkbox06">Nonlinear</label> <br />
+              <input id="checkbox07" type="checkbox" onclick="filterSelection('published_articles', 'M_ML')" />&nbsp;<label for="checkbox07">Machine Learning</label><br />
+              <input id="checkbox08" type="checkbox" onclick="filterSelection('published_articles', 'M_A')" />&nbsp;<label for="checkbox08">Aero</label><br />
+              <input id="checkbox09" type="checkbox" onclick="filterSelection('published_articles', 'M_B')" />&nbsp;<label for="checkbox09">Bio-engineering</label><br />
+            </td>
+            <td valign="top" id="key_c3">
+              <input id="checkbox10" type="checkbox" onclick="filterSelection('published_articles', 'O_L')" />&nbsp;<label for="checkbox10">Large scale</label><br />
+              <input id="checkbox11" type="checkbox" onclick="filterSelection('published_articles', 'O_T')" />&nbsp;<label for="checkbox11">Theory</label><br />
+              <input id="checkbox12" type="checkbox" onclick="filterSelection('published_articles', 'O_A')" />&nbsp;<label for="checkbox12">Algorithms</label><br />
+              <input id="checkbox13" type="checkbox" onclick="filterSelection('published_articles', 'O_E')" />&nbsp;<label for="checkbox13">Education</label><br />
+              <input id="checkbox14" type="checkbox" onclick="filterSelection('published_articles', 'O_AP')" />&nbsp;<label for="checkbox14">Application</label><br />
+              <input id="checkbox15" type="checkbox" onclick="filterSelection('published_articles', 'O_C')" />&nbsp;<label for="checkbox15">Case study</label><br />
+              <input id="checkbox16" type="checkbox" onclick="filterSelection('published_articles', 'O_I')" />&nbsp;<label for="checkbox16">Industrial</label><br />
+              <!-- <input id="checkbox17" type="checkbox" onclick="filterSelection('published_articles', 'S_TN')" />&nbsp;<label for="checkbox17">Tunnel</label><br />
+              <input id="checkbox18" type="checkbox" onclick="filterSelection('published_articles', 'S_WT')" />&nbsp;<label for="checkbox18">Wind turbine</label><br /> -->
+            </td>
+            <!-- <td valign="top" id="key_c4">
+              <input id="checkbox19" type="checkbox" onclick="filterSelection('published_articles', 'O_SF' )" />&nbsp;<label for="checkbox19">Seismic fragility</label><br />
+              <input id="checkbox20" type="checkbox" onclick="filterSelection('published_articles', 'O_SL' )" />&nbsp;<label for="checkbox20">Regional loss assessment</label><br />
+              <input id="checkbox21" type="checkbox" onclick="filterSelection('published_articles', 'O_SEN')" />&nbsp;<label for="checkbox21">Sensor</label><br />
+              <input id="checkbox22" type="checkbox" onclick="filterSelection('published_articles', 'O_FM' )" />&nbsp;<label for="checkbox22">Field mission</label> <br />
+            </td> -->
+          </tr>
+        </table>
+      </div>
+
+      <br />
+      <hr />
+
+      <h3>Published or Accepted Journal Articles</h3>
+      <ul>
+        <!-- @TKS: added a class "published_articles" with a subclass with tags -->
+        <!-- <p class="published_articles  M_HS M_MP" style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          J63. Huang, X. and Kwon, O. (2020) “An integrated simulation method for coupled dynamic systems,” Computer Aided Civil and Infrastructure Engineering (published online)
+          <br /><a href="https://doi.org/10.1111/mice.12556" onclick="target='newwindow'">DOI:10.1111/mice.12556</a></p>
+        <p class="published_articles M_DL O_SL L_E" style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          J62. Kim, T., Song, J., and Kwon, O. (2020) “Pre- and Post-Earthquake Regional Loss Assessment Using Deep Learning,” Earthquake Engineering and Structural Dynamics, 49(7):657-678
+          <br /><a href="https://doi.org/10.1002/eqe.3258" onclick="target='newwindow'">DOI:10.1002/eqe.3258</a></p>
+        <p class="published_articles S_TN L_E" style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          J61. Nguyen, V., Nizamani, Z., Park, D., Kwon, O. (2020) “Numerical Simulation of Damage Evolution of Daikai Station during the 1995 Kobe Earthquake,” Engineering Structures, 206:110180
+          <br /><a href="https://doi.org/10.1016/j.engstruct.2020.110180" onclick="target='newwindow'">DOI:10.1016/j.engstruct.2020.110180</a></p>
+        <p class="published_articles M_DL " style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          J60. Kim, T, Song, J., and Kwon, O. (2020) “Probabilistic Evaluation of Seismic Responses Using Deep Learning Method,” Structural Safety, 84:101913
+          <br /><a href="https://doi.org/10.1016/j.strusafe.2019.101913" onclick="target='newwindow'">DOI:10.1016/j.strusafe.2019.101913</a></p> -->
+
+        <p class="published_articles L_E L_F" style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          1. Del Carpio, M., Hashemi, M. J., & Mosqueda, G. (2017). "Evaluation of integration methods for hybrid simulation of complex structural systems through collapse." Earthquake Engineering and Engineering Vibration, 16(4), 745–759.
+          <br /><a href="https://doi.org/10.1007/s11803-017-0411-z" onclick="target='newwindow'">DOI:10.1007/s11803-017-0411-z</a></p>
+
+        <p class="published_articles L_F " style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          2. Kolay, C., Ricles, J. M., Marullo, T. M., Al-Subaihawi, S., & Quiel, S. E. (2018). "Computational Challenges in Real-Time Hybrid Simulation of Tall Buildings under Multiple Natural Hazards." Key Engineering Materials, 763, 566–575.
+          <br /><a href="https://doi.org/10.4028/www.scientific.net/kem.763.566" onclick="target='newwindow'">DOI:10.4028/www.scientific.net/kem.763.566</a></p>
+
+        <p class="published_articles L_W " style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          3. Maghareh, A., Silva, C. E., & Dyke, S. J. (2018). "Servo-hydraulic actuator in controllable canonical form: Identification and experimental validation." Mechanical Systems and Signal Processing, 100, 398–414.
+          <br /><a href="https://doi.org/10.1016/j.ymssp.2017.07.022" onclick="target='newwindow'">DOI:10.1016/j.ymssp.2017.07.022</a></p>
+
+        <p class="published_articles L_P " style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          4. Wang, X., Kim, R. E., Kwon, O. S., & Yeo, I. (2018). "Hybrid Simulation Method for a Structure Subjected to Fire and Its Application to a Steel Frame." Journal of Structural Engineering (United States), 144(8).
+          <br /><a href="https://doi.org/10.1061/(ASCE)ST.1943-541X.0002113" onclick="target='newwindow'">DOI:10.1061/(ASCE)ST.1943-541X.0002113</a></p>
+
+       <p class="published_articles L_P L_W " style="margin-left:.1in;text-indent:-.3in;margin-bottom: 0">
+          5. Whiteman, M. L., Fernández-Cabán, P. L., Phillips, B. M., Masters, F. J., Bridge, J. A., & Davis, J. R. (2018). "Multi-objective optimal design of a building envelope and structural system using cyber-physical modeling in a wind tunnel." Frontiers in Built Environment, 4.
+         <br /><a href="https://doi.org/10.3389/fbuil.2018.00013" onclick="target='newwindow'">DOI:10.3389/fbuil.2018.00013</a></p>
+      </ul>
+
+      <br />
+      <hr />
+
+    </div>
+
+    <!-- Common Block ....................................................................................... -->
+    <div id="footer">
+      <p><span>&copy; 2020 <a href="#">_ _ )</a></span></p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-537626-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <script type="text/javascript">
+    var url = "/cgi-bin/cgiwrap/~kwon/stat.cgi";
+    var ilog = new Image();
+    ilog.src = url + '?' + escape(document.URL);
+  </script>
+
+  <script>
+    // @TKS: js code that actually work onClick -------------------------------------------------------------------
+    filterSelection("published_articles", 'all')
+    var published_articles_filters = [];
+
+    function filterSelection(category, tag) {
+      var x, i;
+      x = document.getElementsByClassName(category);
+
+      if (tag == 'all') {
+        for (i = 0; i < x.length; i++) {
+          filterAddClass(x[i], "show");
+        }
+        published_articles_filters = [];
+      } else {
+        if (published_articles_filters.includes(tag)) {
+          published_articles_filters.splice(published_articles_filters.indexOf(tag), 1);
+          if (published_articles_filters.length == 0) {
+            return filterSelection("published_articles", 'all');
+          }
+        } else {
+          published_articles_filters.push(tag);
+        }
+        console.log(published_articles_filters);
+        for (i = 0; i < x.length; i++) {
+          filterRemoveClass(x[i], "show");
+          var isPresent = true;
+          published_articles_filters.forEach(
+            function(c) {
+              if (x[i].className.indexOf(c) === -1) {
+                isPresent = false;
+              }
+            }
+          )
+
+          if (isPresent) {
+            filterAddClass(x[i], "show");
+          }
+        }
+      }
+    }
+
+    function filterAddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    function filterRemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+  </script>
+  <!-- ................................................................................................... -->
+</body>
+
+</html>
