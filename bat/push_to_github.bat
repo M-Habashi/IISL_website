@@ -1,7 +1,8 @@
 @echo off
 setlocal
 
-cd /d "%~dp0"
+for %%I in ("%~dp0..") do set "REPO_ROOT=%%~fI"
+cd /d "%REPO_ROOT%"
 
 git rev-parse --is-inside-work-tree >nul 2>nul
 if errorlevel 1 (

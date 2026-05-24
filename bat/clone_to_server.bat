@@ -1,8 +1,9 @@
 @echo off
 setlocal
 
-set "SOURCE=%~dp0"
-if "%SOURCE:~-1%"=="\" set "SOURCE=%SOURCE:~0,-1%"
+set "SCRIPT_DIR=%~dp0"
+if "%SCRIPT_DIR:~-1%"=="\" set "SCRIPT_DIR=%SCRIPT_DIR:~0,-1%"
+for %%I in ("%SCRIPT_DIR%\..") do set "SOURCE=%%~fI"
 set "DEST=Z:\entities\IISL"
 
 echo.
@@ -21,7 +22,7 @@ if not exist "%DEST%\" (
     exit /b 16
 )
 
-robocopy "%SOURCE%" "%DEST%" /E /PURGE /COPY:DT /DCOPY:T /XD .git /XF AGENTS.md /R:1 /W:1 /TEE /LOG:"%LOG%"
+robocopy "%SOURCE%" "%DEST%" /E /PURGE /COPY:DT /DCOPY:T /XD .git unused /XF AGENTS.md /R:1 /W:1 /TEE /LOG:"%LOG%"
 set "ROBOCOPY_EXIT=%ERRORLEVEL%"
 
 echo.

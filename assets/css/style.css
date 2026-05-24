@@ -1,17 +1,17 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	background-attachment: fixed;
-	background-image: url(images/seismo_2.jpg);
+	background-image: url(../images/seismo.png);
 	background-repeat: repeat;
 	background-position: center center;
 }
 html { padding:0; margin:0;}
 
 /* main */
-.main {width:100%; padding:0; margin:0 auto; background:#f9f6ea url(file://///tools.ecn.purdue.edu/web/entities/IISL/images/main_bg.jpg) top repeat-x; }
+.main {width:100%; padding:0; margin:0 auto; background:#f9f6ea url(file://///tools.ecn.purdue.edu/web/entities/IISL/assets/images/main_bg.jpg) top repeat-x; }
 .main2 {
 	width: 1000px;
 	padding: 0;
@@ -36,7 +36,7 @@ html { padding:0; margin:0;}
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-left: auto;
-	background-image: url(images/header.png);
+	background-image: url(../images/header.png);
 	background-position: right bottom;
 	background-repeat: no-repeat;
 	background-color: #000;
@@ -381,7 +381,7 @@ p.response { text-align:center; color:#2c2c2c; font: bold 11px Arial, Helvetica,
 
 /********** footer **********/
 .footer {
-	background: #f9f6ea url(file://///tools.ecn.purdue.edu/web/entities/IISL/images/footer_bg.gif) left repeat-x;
+	background: #f9f6ea url(file://///tools.ecn.purdue.edu/web/entities/IISL/assets/images/footer_bg.gif) left repeat-x;
 	width: 1000px;
 	margin-top: 0;
 	margin-right: auto;

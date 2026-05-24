@@ -1,1 +1,15 @@
 AGENTS.md
+
+# Local OS/editor metadata. Existing tracked copies are quarantined under
+# unused/system_files for review, but new copies should not be added.
+.DS_Store
+Thumbs.db
+._*
+
+# Python/tool caches
+__pycache__/
+*.py[cod]
+
+# Local logs and temporary files
+*.log
+*.tmp
