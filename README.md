@@ -13,7 +13,8 @@ Static website repository for the Intelligent Infrastructure Systems Laboratory.
   - `assets/SpryAssets/`
   - `assets/videos/`
 - `CPS_website/`: standalone CPS/MechWorks site. Keep this folder in place and avoid unrelated edits.
-- `MECHS/`: MECH website and related curriculum content under `MECHS/RTHS_Curriculum/`.
+- `MECHS/`: MECH website files.
+- `RTHS_Curriculum/`: curriculum content kept at the original IISL path because the live MECH Learning Materials page links to it directly.
 - `Publications/`: publication PDFs and related documents.
 - `bat/`: Windows helper scripts for server sync and GitHub pull/push workflows.
 - `unused/`: quarantined files that are not part of the live website.
