@@ -60,8 +60,17 @@ const typeSortRank: Record<string, number> = {
   Report: 2,
 }
 
-const siteBase = import.meta.env.DEV ? "http://localhost:8000/" : "../../"
-const sitePath = (path: string) => new URL(path, siteBase).toString()
+const sitePath = (path: string) => {
+  if (import.meta.env.DEV) {
+    return new URL(path, "http://localhost:8000/").toString()
+  }
+
+  return `../${path}`
+}
+
+const logoSrc = import.meta.env.DEV
+  ? "http://localhost:8000/Generated%20image%201.png"
+  : "../Generated%20image%201.png"
 
 const navItems = [
   { label: "Home", href: sitePath("index.html") },
@@ -130,6 +139,17 @@ function groupToneFor(group: string, sort: SortMode) {
   return undefined
 }
 
+function searchAliasesFor(publication: Publication) {
+  const aliases: string[] = []
+  const searchableText = `${publication.title} ${publication.authors} ${publication.raw} ${publication.keywords.join(" ")}`
+
+  if (/rths|hybrid simulation|real-time|real time/i.test(searchableText)) {
+    aliases.push("rths", "real time hybrid simulation", "real-time hybrid simulation")
+  }
+
+  return aliases
+}
+
 function useFilteredPublications(
   publications: Publication[],
   activeType: FilterType,
@@ -155,6 +175,8 @@ function useFilteredPublications(
           publication.year,
           publication.type,
           publication.keywords.join(" "),
+          publication.raw,
+          searchAliasesFor(publication).join(" "),
         ]
           .join(" ")
           .toLowerCase()
@@ -246,7 +268,10 @@ function PublicationGroups({ publications, sort }: { publications: Publication[]
     <div className="publication-list">
       {groups.map(([group, items]) => (
           <section className="publication-year-group" data-group-tone={groupToneFor(group, sort)} key={group}>
-            <h2>{group}</h2>
+            <div className="publication-group-marker">
+              <h2>{group}</h2>
+              <span className="publication-marker-dot" aria-hidden="true" />
+            </div>
             <div className="publication-rail" aria-hidden="true" />
             <div className="publication-year-items">
               {items.map((publication) => (
@@ -298,11 +323,7 @@ function App() {
     <div className="publications-shell dark">
       <header className="publications-nav">
         <a className="publications-brand" href="/" aria-label="IISL home">
-          <span className="publications-mark" aria-hidden="true" />
-          <span>
-            <span className="publications-brand-main">IISL</span>
-            <span className="publications-brand-sub">Intelligent Infrastructure Systems Laboratory</span>
-          </span>
+          <img src={logoSrc} alt="Intelligent Infrastructure Systems Laboratory" />
         </a>
         <nav aria-label="Main navigation">
           {navItems.map((item) => (
@@ -316,9 +337,6 @@ function App() {
             </Button>
           ))}
         </nav>
-        <Button asChild variant="outline" className="publications-external">
-          <a href="https://engineering.purdue.edu/IISL/">IISL @ Purdue</a>
-        </Button>
       </header>
 
       <main className="publications-main">

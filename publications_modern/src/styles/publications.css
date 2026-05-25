@@ -7,20 +7,20 @@
   --card-foreground: oklch(96% 0.006 80);
   --popover: oklch(16% 0.014 80);
   --popover-foreground: oklch(96% 0.006 80);
-  --primary: oklch(79% 0.16 78);
-  --primary-foreground: oklch(18% 0.035 78);
+  --primary: #fbb03b;
+  --primary-foreground: oklch(15% 0.02 78);
   --secondary: oklch(19% 0.014 80);
   --secondary-foreground: oklch(86% 0.018 80);
   --muted: oklch(19% 0.014 80);
   --muted-foreground: oklch(75% 0.018 80);
   --accent: oklch(21% 0.018 80);
-  --accent-foreground: oklch(88% 0.12 78);
+  --accent-foreground: #fbb03b;
   --destructive: oklch(74% 0.12 43);
   --border: oklch(30% 0.018 80);
   --input: oklch(38% 0.02 80);
-  --ring: oklch(88% 0.12 78);
+  --ring: #fbb03b;
   --radius: 0.45rem;
-  --publication-gold: oklch(79% 0.16 78);
+  --publication-gold: #fbb03b;
   --publication-blue: oklch(75% 0.11 265);
   --publication-red: oklch(74% 0.12 43);
   --space-1: 0.25rem;
@@ -49,7 +49,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 78% 0%, oklch(79% 0.16 78 / 0.06), transparent 26rem),
+    radial-gradient(circle at 78% 0%, rgb(251 176 59 / 0.06), transparent 26rem),
     linear-gradient(180deg, oklch(11% 0.014 80), var(--background) 42rem);
 }
 
@@ -59,7 +59,7 @@ body {
 
 .publications-shell {
   background:
-    radial-gradient(circle at 78% 0%, oklch(79% 0.16 78 / 0.06), transparent 26rem),
+    radial-gradient(circle at 78% 0%, rgb(251 176 59 / 0.06), transparent 26rem),
     linear-gradient(180deg, oklch(11% 0.014 80), var(--background) 42rem);
   color: var(--foreground);
   min-height: 100svh;
@@ -68,7 +68,7 @@ body {
 .publications-nav {
   align-items: center;
   background: oklch(7.5% 0.012 80);
-  border-bottom: 1px solid oklch(79% 0.16 78 / 0.72);
+  border-bottom: 1px solid rgb(251 176 59 / 0.72);
   display: flex;
   gap: var(--space-6);
   min-height: 52px;
@@ -79,52 +79,16 @@ body {
   align-items: center;
   color: var(--foreground);
   display: flex;
-  gap: var(--space-3);
   margin-right: auto;
-  min-width: 250px;
+  min-width: 260px;
   text-decoration: none;
 }
 
-.publications-mark {
-  background: var(--publication-gold);
-  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 92%);
-  height: 27px;
-  position: relative;
-  width: 24px;
-}
-
-.publications-mark::before,
-.publications-mark::after {
-  background: oklch(98% 0.012 80 / 0.84);
-  bottom: 5px;
-  content: "";
-  position: absolute;
-  top: 5px;
-  width: 4px;
-}
-
-.publications-mark::before {
-  left: 7px;
-}
-
-.publications-mark::after {
-  left: 14px;
-}
-
-.publications-brand-main {
+.publications-brand img {
   display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 0.9;
-}
-
-.publications-brand-sub {
-  color: var(--publication-gold);
-  display: block;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.05;
-  max-width: 190px;
+  height: 54px;
+  object-fit: contain;
+  width: auto;
 }
 
 .publications-nav nav {
@@ -148,28 +112,7 @@ body {
 }
 
 .publications-nav nav .is-active {
-  color: var(--publication-gold);
-  position: relative;
-}
-
-.publications-nav nav .is-active::after {
-  background: var(--publication-gold);
-  bottom: -15px;
-  content: "";
-  height: 3px;
-  left: 0.75rem;
-  position: absolute;
-  right: 0.75rem;
-}
-
-.publications-external {
-  color: var(--publication-gold);
-  white-space: nowrap;
-}
-
-.publications-external:hover {
-  border-color: var(--publication-gold);
-  color: var(--publication-gold);
+  color: #fbb03b;
 }
 
 .publications-main {
@@ -332,20 +275,58 @@ body {
 }
 
 .publication-year-group {
+  --marker-offset: 1.05rem;
+  --marker-sticky-top: 0.75rem;
   display: grid;
   grid-template-columns: 54px 28px minmax(0, 1fr);
 }
 
-.publication-year-group h2 {
+.publication-group-marker {
+  align-items: center;
+  align-self: start;
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  grid-template-columns: 54px 28px;
+  margin-top: var(--marker-offset);
+  position: sticky;
+  top: var(--marker-sticky-top);
+  z-index: 2;
+}
+
+.publication-group-marker::before {
+  background: var(--background);
+  content: "";
+  height: calc(var(--marker-sticky-top) + 9px);
+  left: calc(54px + 8px);
+  position: absolute;
+  top: calc(-1 * var(--marker-sticky-top));
+  width: 4px;
+  z-index: 1;
+}
+
+.publication-group-marker h2 {
   color: var(--group-tone, var(--publication-gold));
   font-size: 1rem;
   font-weight: 400;
   grid-column: 1;
-  grid-row: 1;
   line-height: 1;
-  margin: 1.05rem 7px 0 0;
   justify-self: end;
+  margin: 0 7px 0 0;
   width: max-content;
+}
+
+.publication-marker-dot {
+  background: var(--background);
+  border: 2px solid var(--group-tone, var(--publication-gold));
+  border-radius: 999px;
+  grid-column: 2;
+  height: 14px;
+  justify-self: start;
+  margin-left: 3px;
+  position: relative;
+  width: 14px;
+  z-index: 2;
 }
 
 .publication-rail {
@@ -355,25 +336,13 @@ body {
 }
 
 .publication-rail::before {
-  background: var(--group-tone, oklch(79% 0.16 78 / 0.55));
+  background: var(--group-tone, rgb(251 176 59 / 0.55));
   bottom: 0.65rem;
   content: "";
   left: 9px;
   position: absolute;
-  top: calc(1.05rem + 14px);
+  top: calc(var(--marker-offset) + 15px);
   width: 2px;
-}
-
-.publication-rail::after {
-  background: var(--background);
-  border: 2px solid var(--group-tone, var(--publication-gold));
-  border-radius: 999px;
-  content: "";
-  height: 14px;
-  left: 3px;
-  position: absolute;
-  top: 1.05rem;
-  width: 14px;
 }
 
 .publication-year-items {
@@ -572,16 +541,9 @@ body {
     min-width: 0;
   }
 
-  .publications-brand-main {
-    font-size: 2rem;
-  }
-
-  .publications-brand-sub {
-    max-width: 150px;
-  }
-
-  .publications-external {
-    display: none;
+  .publications-brand img {
+    height: 46px;
+    max-width: 240px;
   }
 
   .publication-controls,
@@ -603,12 +565,20 @@ body {
     grid-template-columns: 48px 22px minmax(0, 1fr);
   }
 
+  .publication-group-marker {
+    grid-template-columns: 48px 22px;
+  }
+
+  .publication-group-marker::before {
+    left: calc(48px + 6px);
+  }
+
   .publication-rail::before {
     left: 7px;
   }
 
-  .publication-rail::after {
-    left: 1px;
+  .publication-marker-dot {
+    margin-left: 1px;
   }
 
   .publication-card {

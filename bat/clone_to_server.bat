@@ -42,7 +42,50 @@ if not exist "%SOURCE%\.git\" (
     exit /b 18
 )
 
-robocopy "%SOURCE%" "%DEST%" /E /PURGE /COPY:DT /DCOPY:T /XD .git unused /R:1 /W:1 /TEE /LOG:"%LOG%"
+set "PUBLICATIONS_APP=%SOURCE%\publications_modern"
+set "PUBLICATIONS_DIST=%PUBLICATIONS_APP%\dist"
+
+if exist "%PUBLICATIONS_APP%\package.json" (
+    echo Building modern publications page...
+    echo.
+    pushd "%PUBLICATIONS_APP%"
+    if not exist "node_modules\" (
+        echo Installing publications dependencies with npm ci...
+        call npm ci
+        if errorlevel 1 (
+            popd
+            powershell -NoProfile -Command "Write-Host 'Clone to server failed: npm ci failed for publications_modern.' -ForegroundColor Red"
+            echo.
+            pause
+            exit /b 19
+        )
+    )
+    call npm run build
+    if errorlevel 1 (
+        popd
+        powershell -NoProfile -Command "Write-Host 'Clone to server failed: publications_modern build failed.' -ForegroundColor Red"
+        echo.
+        pause
+        exit /b 20
+    )
+    popd
+) else (
+    powershell -NoProfile -Command "Write-Host 'Clone to server failed: publications_modern package.json was not found.' -ForegroundColor Red"
+    echo Expected path: "%PUBLICATIONS_APP%\package.json"
+    echo.
+    pause
+    exit /b 21
+)
+
+if not exist "%PUBLICATIONS_DIST%\index.html" (
+    powershell -NoProfile -Command "Write-Host 'Clone to server failed: publications_modern dist output was not found.' -ForegroundColor Red"
+    echo Expected path: "%PUBLICATIONS_DIST%\index.html"
+    echo.
+    pause
+    exit /b 22
+)
+
+robocopy "%SOURCE%" "%DEST%" /E /PURGE /COPY:DT /DCOPY:T /XD .git unused node_modules dist publications_modern /R:1 /W:1 /TEE /LOG:"%LOG%"
 set "ROBOCOPY_EXIT=%ERRORLEVEL%"
 
 echo.
@@ -52,17 +95,32 @@ set "HAS_ROBOCOPY_ERROR=%ERRORLEVEL%"
 if %ROBOCOPY_EXIT% GTR 7 goto robocopy_failed
 if %HAS_ROBOCOPY_ERROR% EQU 0 goto robocopy_failed
 
+echo.
+echo Deploying built publications_modern output...
+robocopy "%PUBLICATIONS_DIST%" "%DEST%\publications_modern" /E /PURGE /COPY:DT /DCOPY:T /R:1 /W:1 /TEE /LOG+:"%LOG%"
+set "PUBLICATIONS_ROBOCOPY_EXIT=%ERRORLEVEL%"
+
+if %PUBLICATIONS_ROBOCOPY_EXIT% GTR 7 goto publications_failed
+
+set "DEPLOY_EXIT=%ROBOCOPY_EXIT%"
 powershell -NoProfile -Command "Write-Host 'Clone to server completed successfully.' -ForegroundColor Green"
 goto robocopy_done
 
 :robocopy_failed
+set "DEPLOY_EXIT=%ROBOCOPY_EXIT%"
 powershell -NoProfile -Command "Write-Host 'Clone to server finished with errors. Review the robocopy output above.' -ForegroundColor Red"
+goto robocopy_done
+
+:publications_failed
+set "DEPLOY_EXIT=%PUBLICATIONS_ROBOCOPY_EXIT%"
+powershell -NoProfile -Command "Write-Host 'Clone to server finished with errors while deploying publications_modern. Review the robocopy output above.' -ForegroundColor Red"
 
 :robocopy_done
 
 echo Robocopy exit code: %ROBOCOPY_EXIT%
+if defined PUBLICATIONS_ROBOCOPY_EXIT echo Publications robocopy exit code: %PUBLICATIONS_ROBOCOPY_EXIT%
 echo Robocopy log: "%LOG%"
 echo.
 pause
 
-exit /b %ROBOCOPY_EXIT%
+exit /b %DEPLOY_EXIT%

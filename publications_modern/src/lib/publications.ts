@@ -21,11 +21,13 @@ type PublicationSource = {
   type: PublicationType
 }
 
+const publicationPageBase = import.meta.env.DEV ? "/pages/" : "../pages/"
+
 export const publicationSources: PublicationSource[] = [
-  { url: "/pages/publicationjo.html", type: "Journal" },
-  { url: "/pages/publicationdoc.html", type: "Doctoral Dissertation" },
-  { url: "/pages/publicationms.html", type: "Masters Thesis" },
-  { url: "/pages/publicationtr.html", type: "Technical Report" },
+  { url: `${publicationPageBase}publicationjo.html`, type: "Journal" },
+  { url: `${publicationPageBase}publicationdoc.html`, type: "Doctoral Dissertation" },
+  { url: `${publicationPageBase}publicationms.html`, type: "Masters Thesis" },
+  { url: `${publicationPageBase}publicationtr.html`, type: "Technical Report" },
 ]
 
 function clean(text: string) {
@@ -104,7 +106,7 @@ function authorsFrom(node: Element, title: string, type: PublicationType) {
 function keywordsFor(item: Pick<Publication, "title" | "authors" | "raw" | "type">) {
   const haystack = `${item.title} ${item.authors} ${item.raw}`.toLowerCase()
   const rules: Array<[string, RegExp]> = [
-    ["Real-time hybrid simulation", /hybrid simulation|real-time/i],
+    ["RTHS", /rths|hybrid simulation|real-time|real time/i],
     ["Multi-actuator systems", /multi-actuator|multiple actuator|actuator placement/i],
     ["Structural health monitoring", /health monitoring|damage detection|inspection|condition/i],
     ["Wireless sensing", /wireless|sensor/i],
