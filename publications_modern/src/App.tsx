@@ -349,7 +349,7 @@ function App() {
           <Input
             aria-label="Search publications"
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search publications"
+            placeholder="Search by title, author, year, or keyword, e.g. RTHS 2024"
             type="search"
             value={query}
           />
