@@ -9,6 +9,30 @@
 		body {
 			background-image: url(../assets/images/seismo.png);
 		}
+		.modern-publications-hint {
+			float: right;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			margin: 0 2% 6px 12px;
+			padding: 0;
+			border: 0;
+			background: transparent;
+			color: #4a4a4a;
+			cursor: pointer;
+			font: normal 14px Arial, Helvetica, sans-serif;
+			text-decoration: none;
+		}
+		.modern-publications-hint:hover,
+		.modern-publications-hint:focus {
+			color: #D9A300;
+			outline: none;
+		}
+		.modern-publications-hint-arrow {
+			width: 16px;
+			height: 16px;
+			flex: 0 0 16px;
+		}
 	</style>
 	<link href="../assets/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
 
@@ -74,7 +98,7 @@
 
 
 			<div class="content_main">
-				<button type="button" onclick="window.location.href=(window.location.protocol==='file:'||window.location.hostname==='localhost'||window.location.hostname==='127.0.0.1')?'../publications_modern/dist/index.html':'../publications_modern/'" class="modern-publications-hint" aria-label="switch to modern view" style="float:right;display:inline-flex;align-items:center;gap:8px;margin:0 2% 6px 12px;padding:0;border:0;background:transparent;color:#4a4a4a;cursor:pointer;font:normal 14px Arial, Helvetica, sans-serif;text-decoration:none;"><span>switch to modern view</span><svg class="modern-publications-hint-arrow" aria-hidden="true" width="16" height="16" style="width:16px;height:16px;flex:0 0 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+				<button type="button" onclick="window.location.href=(window.location.protocol==='file:'||window.location.hostname==='localhost'||window.location.hostname==='127.0.0.1')?'../publications_modern/dist/index.html':'../publications_modern/'" class="modern-publications-hint" aria-label="switch to modern view"><span>switch to modern view</span><svg class="modern-publications-hint-arrow" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
 
 				<div class="title">Doctoral Dissertations</div>
 				<p>Montoya, H. (2024).<a
