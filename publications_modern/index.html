@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <script>
+      ;(function () {
+        var isLocalPreview = location.hostname === "localhost" || location.hostname === "127.0.0.1"
+        var isSourcePreview = /\/publications_modern\/index\.html$/.test(location.pathname)
+
+        if (isLocalPreview && isSourcePreview) {
+          location.replace("./dist/index.html" + location.search + location.hash)
+        }
+      })()
+    </script>
+    <script>
       document.write(
         '<link rel="icon" type="image/png" href="' +
           (location.hostname === "localhost" || location.hostname === "127.0.0.1"

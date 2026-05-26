@@ -65,12 +65,12 @@ const sitePath = (path: string) => {
     return new URL(path, "http://localhost:8000/").toString()
   }
 
-  return `../${path}`
+  const siteRoot = window.location.pathname.includes("/publications_modern/dist/") ? "../../" : "../"
+
+  return `${siteRoot}${path}`
 }
 
-const logoSrc = import.meta.env.DEV
-  ? "http://localhost:8000/Generated%20image%201.png"
-  : "../Generated%20image%201.png"
+const logoSrc = sitePath("Generated%20image%201.png")
 
 const navItems = [
   { label: "Home", href: sitePath("index.html") },
@@ -322,7 +322,7 @@ function App() {
   return (
     <div className="publications-shell dark">
       <header className="publications-nav">
-        <a className="publications-brand" href="/" aria-label="IISL home">
+        <a className="publications-brand" href={sitePath("index.html")} aria-label="IISL home">
           <img src={logoSrc} alt="Intelligent Infrastructure Systems Laboratory" />
         </a>
         <nav aria-label="Main navigation">

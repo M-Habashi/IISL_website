@@ -21,7 +21,13 @@ type PublicationSource = {
   type: PublicationType
 }
 
-const publicationPageBase = import.meta.env.DEV ? "/pages/" : "../pages/"
+const publicationPageBase = (() => {
+  if (import.meta.env.DEV) {
+    return "/pages/"
+  }
+
+  return window.location.pathname.includes("/publications_modern/dist/") ? "../../pages/" : "../pages/"
+})()
 
 export const publicationSources: PublicationSource[] = [
   { url: `${publicationPageBase}publicationjo.html`, type: "Journal" },
