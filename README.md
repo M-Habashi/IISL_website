@@ -32,3 +32,39 @@ python -m http.server 8000
 Then open `http://localhost:8000/index.html`.
 
 For the CPS site, use `http://localhost:8000/CPS_website/index.html`.
+
+## Prof Dyke Manuscript Link Request Instructions
+
+Use the redirect page when a manuscript needs one stable IISL link that can first point to a local PDF and later point to the published location.
+
+Public redirect URL after deployment. This is the stable link to share and reuse later for the published page:
+
+```text
+https://engineering.purdue.edu/IISL/redirect/AIAA-LSED-TF-Opion-Paper/
+```
+
+Do not share the direct PDF URL. Share only the stable redirect URL above so the same link can later point to the publication page.
+
+Redirect file:
+
+```text
+redirect/AIAA-LSED-TF-Opion-Paper/index.html
+```
+
+To update the destination, change only the `TARGET_URL` line. The current temporary PDF target is:
+
+```js
+const TARGET_URL = "../AIAA%20LSED%20TF%20Opion%20Paper.pdf";
+```
+
+The PDF is hosted next to the redirect page:
+
+```text
+redirect/AIAA LSED TF Opion Paper.pdf
+```
+
+After the manuscript is published, replace that same line with the final public link, for example:
+
+```js
+const TARGET_URL = "https://doi.org/10.xxxx/xxxxx";
+```

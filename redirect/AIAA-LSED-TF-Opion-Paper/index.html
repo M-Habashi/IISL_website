@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>IISL Publication Link</title>
+  <script>
+    const TARGET_URL = "../AIAA%20LSED%20TF%20Opion%20Paper.pdf";
+
+    window.location.replace(TARGET_URL);
+  </script>
+</head>
+<body>
+  <p>Redirecting. <a id="redirect-link">Open the link directly</a>.</p>
+  <script>
+    const redirectLink = document.getElementById("redirect-link");
+    redirectLink.href = TARGET_URL;
+    redirectLink.textContent = TARGET_URL;
+  </script>
+</body>
+</html>
